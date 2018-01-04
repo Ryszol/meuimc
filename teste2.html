@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Movendo elemento</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #elemento {
+            left: 33.7%;
+            position: absolute;
+            /* importante */
+        }
+    </style>
+    <script>
+        function move() {
+            // altura do botao
+            // valor da posição a esquerda do elemento
+            var left = 33.7;
+            // valor da posição topo do elemento
+            // função a ser chamada até chegar a posição informada
+            function deslocamento() {
+                // incrementando contador
+                left = left - 0.5;
+                // aplicando estilo no elemento
+                document.getElementById('elemento').style.left = left + '%';
+                // verificando se chegou ao ponto desejado
+                if (left < 11) {
+                    // interrompe o processo de deslocamento 
+                    clearInterval(id);
+                }
+            }
+            // desloca o elemento até 1 segundo
+            // aumentando o valor, vai demorar mais para chegar
+            var id = setInterval(deslocamento, 12);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="elemento">
+        <input type="button" id="btnMover" value="Mover" onclick="move()"> clique para mover
+        <table id="tabela">
+                <tr>
+                    <td colspan="2" class="titulo">
+                        <h1>Calcule seu IMC!</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">Peso: </span>
+                    </td>
+                    <td class="campo">
+                        <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onchange="unidadeMassa(); calcular()"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">Altura: </span>
+                    </td>
+                    <td class="campo">
+                        <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="move();unidadeAltura(); calcular(); mostrarTabela()"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">IMC: </span>
+                    </td>
+                    <td class="campo">
+                        <div id="resultado"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="botao">
+                        <button class="enviar" onclick="move(); calcular()">Calcular!</button>
+                    </td>
+                </tr>
+            </table>
+    </div>
+</body>
+
+</html>

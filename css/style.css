@@ -11,7 +11,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#600000', end
 
 background-size: 100% 1080px;
 
-margin-top: 20%;
+margin-top: 13%;
 position: relative;
 top: 50%;
 transform: translateY(-30%);
@@ -25,9 +25,11 @@ h1{
     text-align: center;
 }
 
-table{
-    margin: 0 auto;
-}
+#elemento {
+    left: 33.7%;
+    position: absolute;
+  }
+
 tr{
     padding: 50px 0;
 }
@@ -47,12 +49,14 @@ td.campo{
 td.botao{
     text-align: center;
 }
-
+td.titulo{
+    height: 130px;
+}
 span.dados{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30pt;
+    font-size: 25pt;
     margin: 20px;
-    height: 35px;
+    height: 25px;
     color: #fff;
     display: block;    
 }
@@ -60,7 +64,7 @@ span.dados{
 div#resultado{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20pt;
-    margin-left: 35px;
+    margin-left: 30px;
     color: #fff;
 }
 

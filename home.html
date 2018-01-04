@@ -9,41 +9,46 @@
 </head>
 
 <body>
-    <h1>Calcule seu IMC!</h1>
-    <br>
-    <table>
-        <tr>
-            <td class="label">
-                <span class="dados">Massa Corporal: </span>
-            </td>
-            <td class="campo">
-                <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onchange="unidadeMassa(); calcular()"
-                />
-            </td>
-        </tr>
-        <tr>
-            <td class="label">
-                <span class="dados">Altura: </span>
-            </td>
-            <td class="campo">
-                <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="unidadeAltura(); calcular()"
-                />
-            </td>
-        </tr>
-        <tr>
-            <td class="label">
-                <span class="dados">Resultado: </span>
-            </td>
-            <td class="campo">
-                <div id="resultado"></div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" class="botao">
-                <button class="enviar" onclick="calcular()">Calcular!</button>
-            </td>
-        </tr>
-    </table>
+    <div id="elemento">
+        <table id="tabela">
+            <tr>
+                <td colspan="2" class="titulo">
+                    <h1>Calcule seu IMC!</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <span class="dados">Peso: </span>
+                </td>
+                <td class="campo">
+                    <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onchange="unidadeMassa(); calcular()"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <span class="dados">Altura: </span>
+                </td>
+                <td class="campo">
+                    <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="mostrarTabela();unidadeAltura(); calcular()"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <span class="dados">IMC: </span>
+                </td>
+                <td class="campo">
+                    <div id="resultado"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="botao">
+                    <button class="enviar" onclick="mostrarTabela(); calcular()">Calcular!</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
