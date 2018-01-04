@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cálculo IMC Melhorado</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/imc.js"></script>
+</head>
+
+<body>
+    <h1>Calcule seu IMC!</h1>
+    <br>
+    <table>
+        <tr>
+            <td class="label">
+                <span class="dados">Massa Corporal: </span>
+            </td>
+            <td class="campo">
+                <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onchange="unidadeMassa(); calcular()"
+                />
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <span class="dados">Altura: </span>
+            </td>
+            <td class="campo">
+                <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="unidadeAltura(); calcular()"
+                />
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <span class="dados">Resultado: </span>
+            </td>
+            <td class="campo">
+                <div id="resultado"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="botao">
+                <button class="enviar" onclick="calcular()">Calcular!</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
