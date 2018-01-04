@@ -9,8 +9,8 @@ background: -ms-linear-gradient(-45deg,  rgba(96,0,0,1) 0%,rgba(196,0,0,1) 100%)
 background: linear-gradient(135deg,  rgba(96,0,0,1) 0%,rgba(196,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#600000', endColorstr='#c40000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-background-size: 100% 1080px;
-background-position: fixed;
+background-size: 100%, 100%;
+background-attachment: fixed;
 margin-top: 13%;
 position: relative;
 top: 50%;
