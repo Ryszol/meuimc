@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Evento onabort</title>
+
+    <script>
+        function perguntarSeguir() {
+            resposta = confirm("O carregamento da página foi detido e há uma imagem que você não está vendo.\nDeseja carregar a imagem?")
+            if (resposta)
+                document.img1.src = "https://beachtreasuresandtreasurebeaches.files.wordpress.com/2012/05/ilha-grande.jpg"
+        }
+    </script>
+
+</head>
+
+<body>
+    <img name=img1 src="https://beachtreasuresandtreasurebeaches.files.wordpress.com/2012/05/ilha-grande.jpg" alt="Imagem que pesa 115K"
+        border="0" onabort="perguntarSeguir()">
+    <br> Clique o botão de parar o carregamento da página e se colocará em funcionamento o evento onerror
+
+</body>
+
+</html>

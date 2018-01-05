@@ -9,46 +9,116 @@
 </head>
 
 <body>
-    <div id="elemento">
-        <table id="tabela">
-            <tr>
-                <td colspan="2" class="titulo">
-                    <h1>Calcule seu IMC!</h1>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">
-                    <span class="dados">Peso: </span>
-                </td>
-                <td class="campo">
-                    <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onchange="unidadeMassa(); calcular()"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td class="label">
-                    <span class="dados">Altura: </span>
-                </td>
-                <td class="campo">
-                    <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="mostrarTabela();unidadeAltura(); calcular()"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <td class="label">
-                    <span class="dados">IMC: </span>
-                </td>
-                <td class="campo">
-                    <div id="resultado"></div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="botao">
-                    <button class="enviar" onclick="mostrarTabela(); calcular()">Calcular!</button>
-                </td>
-            </tr>
-        </table>
+    <div id="situacao"></div>
+    <div id="tudo">
+        <div id="elemento">
+            <table id="tabela">
+                <tr>
+                    <td colspan="2" class="titulo">
+                        <h1>Calcule seu IMC!</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">Peso: </span>
+                    </td>
+                    <td class="campo">
+                        <input class="dados" type="text" id="massa" placeholder="Em kilogramas" autocomplete="off" onblur="unidadeMassa()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">Altura: </span>
+                    </td>
+                    <td class="campo">
+                        <input class="dados" type="text" id="altura" placeholder="Em metros" autocomplete="off" onchange="unidadeAltura()" onblur="mostrarTabela(); calcular()"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">
+                        <span class="dados">IMC: </span>
+                    </td>
+                    <td class="campo">
+                        <div id="resultado"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="botao">
+                        <button class="enviar" onclick="mostrarTabela(); calcular()">Calcular!</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divTabela">
+            <!-- TABELA IMC -->
+            <table id="imcTabela">
+                <tr id="imcTr">
+                    <td colspan="2" id="imcTdTitulo">
+                        <p class="titulo">Tabela Íncide de Massa Corporal</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Abaixo de 17</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Muito abaixo do peso</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Entre 17 e 18,49</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Abaixo do peso</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Entre 18,5 e 24,99</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Peso Ideal</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Entre 25 e 29,99</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Acima do peso</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Entre 30 e 34,99</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Obesidade I</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Entre 35 e 39,99</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Obesidade II</p>
+                    </td>
+                </tr>
+                <tr id="imcTr">
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Acima de 40</p>
+                    </td>
+                    <td id="imcTd">
+                        <p class="resultadoTabela">Obesidade III</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
     </div>
+
 </body>
 
 </html>
